@@ -32,7 +32,7 @@
 @media screen and (max-width: 767px) {
   .calculator__title {
     font-size: 34px;
-    max-width: 279px;
+    width: 100%;
   }
 }
 .calculator__form {
@@ -54,7 +54,6 @@
   .calculator__form {
     padding: 32px 0 25px;
     gap: 25px;
-    max-width: 280px;
   }
 }
 .calculator__info {
@@ -101,7 +100,7 @@
 }
 @media screen and (max-width: 767px) {
   .calculator__price {
-    gap: 2px;
+    gap: 5px;
     width: 280px;
     height: 41px;
     font-size: 14px;
@@ -154,10 +153,11 @@
 }
 @media screen and (max-width: 767px) {
   .calculator__button {
-    width: 280px;
+    width: 100%;
     height: 60px;
     font-size: 22px;
     line-height: 20px;
+    margin-top: 3px;
   }
 }
 
@@ -182,7 +182,7 @@
 }
 @media screen and (max-width: 767px) {
   .input {
-    width: 280px;
+    width: 100%;
   }
 }
 .input__title {
@@ -234,7 +234,7 @@
   .input__info {
     margin-top: 8px;
     padding-left: 20px;
-    width: 280px;
+    width: 100%;
     font-size: 22px;
     line-height: 20px;
     height: 60px;
@@ -313,7 +313,7 @@
 }
 @media screen and (max-width: 767px) {
   .input__range {
-    width: 240px;
+    width: 90%;
   }
 }
 .input__range::-webkit-slider-runnable-track {
@@ -328,6 +328,7 @@
   cursor: pointer;
   width: 20px;
   height: 20px;
+  z-index: 2;
 }
 .input__range::-moz-range-track {
   -moz-appearance: none;
@@ -347,7 +348,7 @@
 }
 @media screen and (max-width: 767px) {
   .input__range::-moz-range-track {
-    width: 240px;
+    width: 90%;
   }
 }
 .input__range::-moz-range-thumb {
@@ -357,6 +358,7 @@
   cursor: pointer;
   width: 20px;
   height: 20px;
+  z-index: 2;
 }
 .input__range_type_car-coast {
   background: -webkit-linear-gradient(left, #FF9514 0%, #FF9514 39%, #E1E1E1 39%, #E1E1E1 100%);
