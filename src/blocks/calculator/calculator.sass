@@ -1,16 +1,117 @@
 .calculator
     padding: 213px 47px
 
+    @media screen and (max-width: 1119px)
+        padding: 64px 36px
+
+    @media screen and (max-width: 767px)
+        padding: 44px 21px
+
     &__title
         @include nekst-text
-        font-size: 60px
+        font-size: 54px
         max-width: 750px
         margin: 0
         line-height: 90%
 
+        @media screen and (max-width: 767px)
+            font-size: 34px
+            max-width: 279px
+
     &__form
         display: flex
         gap: 32px
+        max-width: calc(100% - 95px)
         width: 100%
         padding: 32px 0 51px
-        
+
+        @media screen and (max-width: 1119px)
+            flex-direction: column
+            gap: 39px
+            max-width: 696px
+            padding: 44px 0
+
+        @media screen and (max-width: 767px)
+            padding: 32px 0 25px
+            gap: 25px
+            max-width: 280px
+
+    &__info
+        display: flex
+        gap: 181px
+        width: 100%
+
+        @media screen and (max-width: 1439px)
+            gap: 73px
+
+        @media screen and (max-width: 1119px)
+            gap: 35px 31px
+            flex-wrap: wrap
+
+        @media screen and (max-width: 767px)
+            gap: 30px
+            flex-direction: column
+
+    &__price
+        @include gilroy-text
+        font-size: 16px
+        line-height: 150%
+        width: 279px
+        height: 81px
+        display: flex
+        flex-direction: column
+        margin: 0
+        color: #575757
+        gap: 10px
+
+        @media screen and (max-width: 1119px)
+            gap: 10px
+            width: 332px
+
+        @media screen and (max-width: 767px)
+            gap: 5px
+            width: 280px
+            height: 41px
+            font-size: 14px
+            line-height: 136%
+
+    &__sum
+        @include nekst-text
+        color: #333333
+        font-size: 54px
+        line-height: 90%
+
+        @media screen and (max-width: 767px)
+            font-size: 22px
+
+    &__button
+        @include nekst-text
+        background-color: #FF9514
+        color: #FFFFFF
+        border-radius: 40px
+        font-size: 30px
+        line-height: 36px
+        width: 426px
+        height: 68px
+        border: none
+        margin-top: 9px
+        cursor: pointer
+
+        &:hover
+            background-color: #111111
+
+        &:focus
+            background-color: #575757
+
+        @media screen and (max-width: 1439px)
+            width: 320px
+
+        @media screen and (max-width: 1119px)
+            width: 345px
+
+        @media screen and (max-width: 767px)
+            width: 280px
+            height: 60px
+            font-size: 22px
+            line-height: 20px
+            margin-top: 3px

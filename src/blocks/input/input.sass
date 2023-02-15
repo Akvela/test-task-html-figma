@@ -1,8 +1,20 @@
 .input
-    display: flex;
-    flex-direction: column;
-    max-width: 427px
-    width: 100%
+    display: flex
+    flex-direction: column
+    width: 427px
+    border: none
+    margin: 0
+    padding: 0
+    position: relative
+
+    @media screen and (max-width: 1439px)
+        width: 320px
+    
+    @media screen and (max-width: 1119px)
+        width: 696px
+    
+    @media screen and (max-width: 767px)
+        width: 280px
 
     &__title
         @include gilroy-text
@@ -10,55 +22,158 @@
         line-height: 20px
         color: #575757
 
+        @media screen and (max-width: 767px)
+            font-size: 14px
+            line-height: 19px
+
     &__info
         @include nekst-text
         font-size: 30px
         line-height: 36px
-        width: 100%
+        display: block
+        width: 427px
         height: 68px
         background: #F3F3F4
+        border: none
         border-radius: 16px
-        padding: 16px 16px 16px 24px
-        margin: 0
-        display: flex
-        justify-content: space-between
+        margin-top: 24px
+        padding: 16px 16px 16px 25px
         color: #575757
+        box-sizing: border-box
+        outline: none
+        -moz-appearance: textfield
+
+        @media screen and (max-width: 1439px)
+            width: 320px
+            padding-left: 28px
+
+        @media screen and (max-width: 1119px)
+            width: 696px
+            padding-left: 24px
+
+        @media screen and (max-width: 767px)
+            margin-top: 8px
+            padding-left: 20px
+            width: 280px
+            font-size: 22px
+            line-height: 20px
+            height: 60px
+
+        &::-webkit-outer-spin-button
+            -webkit-appearance: none
+
+        &::-webkit-inner-spin-button
+            -webkit-appearance: none
+
+        &:focus
+            background-color: transparent
+            border: 1px solid #F3F3F4
+
+        &:disabled
+            opacity: 0.6
+
+    &__icon
+        @include nekst-text
+        color: #575757
+        position: absolute
+        bottom: 19px
+        right: 26px
+        margin: 0
+        font-size: 30px
+
+        @media screen and (max-width: 767px)
+            font-size: 22px
+            line-height: 20px
+            right: 21px
+
+        &_type
+            &_percent
+                display: flex
+                width: 69px
+                height: 54px
+                background: #EBEBEC
+                border-radius: 16px
+                font-size: 20px
+                line-height: 120%
+                bottom: 7px
+                right: 7px
+                justify-content: center
+                align-items: center
+
+                @media screen and (max-width: 767px)
+                    width: 67px
+                    height: 48px
+                    border-radius: 12px
+                    bottom: 6px
+                    right: 6px
 
     &__range
-        width: 379px
-        margin: -1px auto 0
         -webkit-appearance: none
-        -moz-appearance: none
         appearance: none
+        width: 379px
+        margin: -2px auto 0
+        height: 2px
 
-        ::-webkit-slider-runnable-track
-            height: 1px
-            background-color: #E1E1E1
+        @media screen and (max-width: 1439px)
+            width: 270px
 
-        :-moz-range-track
-    	      height: 1px
-            background-color: #E1E1E1
+        @media screen and (max-width: 1119px)
+            width: 648px
 
-        ::-webkit-slider-thumb
+        @media screen and (max-width: 767px)
+            width: 240px
+
+        &::-webkit-slider-runnable-track
+            margin-top: -2px
+            -webkit-appearance: none
+            color: #FF9514
+
+        &::-webkit-slider-thumb
+            -webkit-appearance: none
             background: #FF9514
             border-radius: 50px
-            cursor: pointer;
+            cursor: pointer
             width: 20px
             height: 20px
-            -webkit-appearance: none
-            margin-top: -10px
 
-        ::-moz-range-thumb
-    	      background: #FF9514
+        &::-moz-range-track
+            -moz-appearance: none
+            width: 379px
+            margin: -2px auto 0
+            height: 2px
+
+            @media screen and (max-width: 1439px)
+                width: 270px
+            
+            @media screen and (max-width: 1119px)
+                width: 648px
+
+            @media screen and (max-width: 767px)
+                width: 240px
+
+        &::-moz-range-thumb
+            -moz-appearance: none
+            background: #FF9514
             border-radius: 50px
-            cursor: pointer;
+            cursor: pointer
             width: 20px
             height: 20px
-            -webkit-appearance: none
-            margin-top: -10px
 
-        ::-ms-fill-lower
-	          background-color: #FF9514
+        &_type
+            &_car-coast
+                background: -webkit-linear-gradient(left, #FF9514 0%, #FF9514 39%, #E1E1E1 39%, #E1E1E1 100%)
 
-        ::-moz-range-progress
-	          background-color: #FF9514
+                &::-moz-range-track
+                    background: -webkit-linear-gradient(left, #FF9514 0%, #FF9514 39%, #E1E1E1 39%, #E1E1E1 100%)
+
+            &_initial-fee
+                background: -webkit-linear-gradient(left, #FF9514 0%, #FF9514 6%, #E1E1E1 6%, #E1E1E1 100%)
+
+                &::-moz-range-track
+                    background: -webkit-linear-gradient(left, #FF9514 0%, #FF9514 6%, #E1E1E1 6%, #E1E1E1 100%)
+
+            &_rental-range
+                background: -webkit-linear-gradient(left, #FF9514 0%, #FF9514 50%, #E1E1E1 50%, #E1E1E1 100%)
+
+                &::-moz-range-track
+                    background: -webkit-linear-gradient(left, #FF9514 0%, #FF9514 50%, #E1E1E1 50%, #E1E1E1 100%)
