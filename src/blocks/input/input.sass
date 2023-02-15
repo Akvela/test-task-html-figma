@@ -1,8 +1,21 @@
 .input
-    display: flex;
-    flex-direction: column;
+    display: flex
+    flex-direction: column
     max-width: 427px
     width: 100%
+    border: none
+    margin: 0
+    padding: 0
+    position: relative
+
+        @media screen and (max-width: 1439px)
+            width: 320px
+
+        @media screen and (max-width: 1119px)
+            width: 696px
+
+        @media screen and (max-width: 767px)
+            width: 100%
 
     &__title
         @include gilroy-text
@@ -25,15 +38,85 @@
         border: none
         border-radius: 16px
         padding: 16px 16px 16px 24px
-        margin: 0
-        display: flex
-        justify-content: space-between
+        margin-top: 24px
+        padding: 16px 16px 16px 25px
         color: #575757
+        box-sizing: border-box
+        outline: none
+        -moz-appearance: textfield
+
+        @media screen and (max-width: 1439px)
+            width: 320px
+            padding-left: 28px
+
+        @media screen and (max-width: 1119px)
+            width: 696px
+            padding-left: 24px
+
+        @media screen and (max-width: 767px)
+            margin-top: 8px
+            padding-left: 20px
+            width: 100%
+            font-size: 22px
+            line-height: 20px
+            height: 60px
+
+        &::-webkit-outer-spin-button
+            -webkit-appearance: none
+
+        &::-webkit-inner-spin-button
+            -webkit-appearance: none
+
+        &:focus
+            background-color: transparent
+            border: 1px solid #F3F3F4
+
+        &:disabled
+            opacity: 0.6
+
+    &__icon
+        @include nekst-text
+        color: #575757
+        position: absolute
+        bottom: 19px
+        right: 26px
+        padding: 16px 16px 16px 24px
+        margin: 0
+        font-size: 30px
+
+        @media screen and (max-width: 767px)
+            font-size: 22px
+            line-height: 20px
+            right: 21px
+
+        &_type
+            &_percent
+                display: flex
+                width: 69px
+                height: 54px
+                background: #EBEBEC
+                border-radius: 16px
+                font-size: 20px
+                line-height: 120%
+                bottom: 7px
+                right: 7px
+                justify-content: center
+                align-items: center
+
+                @media screen and (max-width: 767px)
+                    width: 67px
+                    height: 48px
+                    border-radius: 12px
+                    bottom: 6px
+                    right: 6px
 
     &__range
         -webkit-appearance: none
         appearance: none
         z-index: 2
+        width: 379px
+        margin: -2px auto 0
+        height: 2px
 
         @media screen and (max-width: 1439px)
             width: 270px
