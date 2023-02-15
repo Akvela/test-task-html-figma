@@ -12,29 +12,26 @@
       <h1 class="calculator__title">Рассчитайте стоимость автомобиля в лизинг</h1>
       <form class="calculator__form">
 
-        <div class="input">
+        <fieldset class="input">
           <label for="car-cost" class="input__title">Стоимость автомобиля</label>
-          <p class="input__info">3300000
-            <span>&#8381</span>
-          </p>
-          <input type="range" id="car-cost" class="input__range" min="1500000" max="10000000" value="3300000">
-        </div>
+          <input class="input__info" type="number" value="3300000" min="1500000" max="10000000" id="car-cost">
+          <p class="input__icon">&#8381</p>
+          <input type="range" id="car-cost-range" class="input__range input__range_type_car-coast" min="0" max="100" value="39">
+        </fieldset>
 
-        <div class="input">
+        <fieldset class="input">
           <label for="an-initial-fee" class="input__title">Первоначальный взнос</label>
-          <p class="input__info">420000
-            <span>13%</span>
-          </p>
-          <input type="range" id="an-initial-fee" class="input__range" min="10" max="60" value="13">
-        </div>
+          <input class="input__info" type="number" value="420000" id="an-initial-fee">
+          <p class="input__icon input__icon_type_percent" id="percent">13%</p>
+          <input type="range" id="an-initial-fee-range" class="input__range input__range_type_initial-fee" min="10" max="60" value="13">
+        </fieldset>
 
-        <div class="input">
+        <fieldset class="input">
           <label for="rental-period" class="input__title">Срок лизинга</label>
-          <p class="input__info">60
-            <span>мес.</span>
-          </p>
-          <input type="range" id="rental-period" class="input__range" min="6" max="120" value="60">
-        </div>
+          <input class="input__info" type="number" value="60" min="6" max="120" id="rental-period">
+          <p class="input__icon">мес.</p>
+          <input type="range" id="rental-period-range" class="input__range input__range_type_rental-range" min="0" max="120" value="60">
+        </fieldset>
       
       </form>
     </section>
