@@ -10,7 +10,7 @@
   <main>
     <section class="calculator">
       <h1 class="calculator__title">Рассчитайте стоимость автомобиля в&nbsp;лизинг</h1>
-      <form class="calculator__form" name="calculator">
+      <form class="calculator__form" name="calculator" id="calculator">
 
         <fieldset class="input">
           <label for="car-cost" class="input__title">Стоимость автомобиля</label>
@@ -36,10 +36,10 @@
       </form>
       <div class="calculator__info">
         <p class="calculator__price">Сумма договора лизинга
-          <span class="calculator__sum">4 467 313 &#8381;</span>
+          <span class="calculator__sum" id="leasing-sum">4 467 313</span>
         </p>
         <p class="calculator__price">Ежемесячный платеж от
-          <span class="calculator__sum">114 455 &#8381;</span>
+          <span class="calculator__sum" id="monthly-payment">114 455</span>
         </p>
         <button class="calculator__button" type="submit" form="calculator">Оставить заявку</button>
       </div>

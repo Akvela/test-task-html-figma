@@ -8,14 +8,14 @@
     padding: 0
     position: relative
 
-        @media screen and (max-width: 1439px)
-            width: 320px
+    @media screen and (max-width: 1439px)
+        width: 320px
 
-        @media screen and (max-width: 1119px)
-            width: 696px
+    @media screen and (max-width: 1119px)
+        width: 696px
 
-        @media screen and (max-width: 767px)
-            width: 100%
+    @media screen and (max-width: 767px)
+        width: 100%
 
     &__title
         @include gilroy-text
@@ -78,8 +78,8 @@
         @include nekst-text
         color: #575757
         position: absolute
-        bottom: 19px
-        right: 26px
+        bottom: 4px
+        right: 10px
         padding: 16px 16px 16px 24px
         margin: 0
         font-size: 30px
@@ -87,13 +87,13 @@
         @media screen and (max-width: 767px)
             font-size: 22px
             line-height: 20px
-            right: 21px
+            right: 4px
 
         &_type
             &_percent
                 display: flex
-                width: 69px
-                height: 54px
+                width: 31px
+                height: 23px
                 background: #EBEBEC
                 border-radius: 16px
                 font-size: 20px
@@ -104,16 +104,16 @@
                 align-items: center
 
                 @media screen and (max-width: 767px)
-                    width: 67px
-                    height: 48px
+                    width: 28px
+                    height: 16px
                     border-radius: 12px
                     bottom: 6px
                     right: 6px
+                    font-size: 22px
 
     &__range
         -webkit-appearance: none
         appearance: none
-        z-index: 2
         width: 379px
         margin: -2px auto 0
         height: 2px
@@ -125,7 +125,7 @@
             width: 648px
 
         @media screen and (max-width: 767px)
-            width: 90%
+            width: 86%
 
         &::-webkit-slider-runnable-track
             margin-top: -2px
@@ -153,7 +153,7 @@
                 width: 648px
 
             @media screen and (max-width: 767px)
-                width: 90%
+                width: 86%
 
         &::-moz-range-thumb
             -moz-appearance: none
@@ -172,9 +172,11 @@
 
             &_initial-fee
                 background: -webkit-linear-gradient(left, #FF9514 0%, #FF9514 6%, #E1E1E1 6%, #E1E1E1 100%)
+                z-index: 2
 
                 &::-moz-range-track
                     background: -webkit-linear-gradient(left, #FF9514 0%, #FF9514 6%, #E1E1E1 6%, #E1E1E1 100%)
+                    z-index: 2
 
             &_rental-range
                 background: -webkit-linear-gradient(left, #FF9514 0%, #FF9514 50%, #E1E1E1 50%, #E1E1E1 100%)

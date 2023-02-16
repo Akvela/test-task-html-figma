@@ -92,6 +92,11 @@
   color: #575757;
   gap: 10px;
 }
+@media screen and (max-width: 1439px) {
+  .calculator__price {
+    width: 283px;
+  }
+}
 @media screen and (max-width: 1119px) {
   .calculator__price {
     gap: 10px;
@@ -144,11 +149,13 @@
 @media screen and (max-width: 1439px) {
   .calculator__button {
     width: 320px;
+    margin-left: -9px;
   }
 }
 @media screen and (max-width: 1119px) {
   .calculator__button {
     width: 345px;
+    margin-left: 0;
   }
 }
 @media screen and (max-width: 767px) {
@@ -160,11 +167,15 @@
     margin-top: 3px;
   }
 }
+.calculator__button:disabled {
+  opacity: 0.4;
+}
 
 .input {
   display: flex;
   flex-direction: column;
-  width: 427px;
+  max-width: 427px;
+  width: 100%;
   border: none;
   margin: 0;
   padding: 0;
@@ -211,6 +222,7 @@
   background: #F3F3F4;
   border: none;
   border-radius: 16px;
+  padding: 16px 16px 16px 24px;
   margin-top: 24px;
   padding: 16px 16px 16px 25px;
   color: #575757;
@@ -259,8 +271,9 @@
   font-style: normal;
   color: #575757;
   position: absolute;
-  bottom: 19px;
-  right: 26px;
+  bottom: 4px;
+  right: 10px;
+  padding: 16px 16px 16px 24px;
   margin: 0;
   font-size: 30px;
 }
@@ -268,13 +281,13 @@
   .input__icon {
     font-size: 22px;
     line-height: 20px;
-    right: 21px;
+    right: 4px;
   }
 }
 .input__icon_type_percent {
   display: flex;
-  width: 69px;
-  height: 54px;
+  width: 31px;
+  height: 23px;
   background: #EBEBEC;
   border-radius: 16px;
   font-size: 20px;
@@ -286,11 +299,12 @@
 }
 @media screen and (max-width: 767px) {
   .input__icon_type_percent {
-    width: 67px;
-    height: 48px;
+    width: 28px;
+    height: 16px;
     border-radius: 12px;
     bottom: 6px;
     right: 6px;
+    font-size: 22px;
   }
 }
 .input__range {
@@ -313,7 +327,7 @@
 }
 @media screen and (max-width: 767px) {
   .input__range {
-    width: 90%;
+    width: 86%;
   }
 }
 .input__range::-webkit-slider-runnable-track {
@@ -328,7 +342,6 @@
   cursor: pointer;
   width: 20px;
   height: 20px;
-  z-index: 2;
 }
 .input__range::-moz-range-track {
   -moz-appearance: none;
@@ -348,7 +361,7 @@
 }
 @media screen and (max-width: 767px) {
   .input__range::-moz-range-track {
-    width: 90%;
+    width: 86%;
   }
 }
 .input__range::-moz-range-thumb {
@@ -358,7 +371,6 @@
   cursor: pointer;
   width: 20px;
   height: 20px;
-  z-index: 2;
 }
 .input__range_type_car-coast {
   background: -webkit-linear-gradient(left, #FF9514 0%, #FF9514 39%, #E1E1E1 39%, #E1E1E1 100%);
@@ -368,9 +380,11 @@
 }
 .input__range_type_initial-fee {
   background: -webkit-linear-gradient(left, #FF9514 0%, #FF9514 6%, #E1E1E1 6%, #E1E1E1 100%);
+  z-index: 2;
 }
 .input__range_type_initial-fee::-moz-range-track {
   background: -webkit-linear-gradient(left, #FF9514 0%, #FF9514 6%, #E1E1E1 6%, #E1E1E1 100%);
+  z-index: 2;
 }
 .input__range_type_rental-range {
   background: -webkit-linear-gradient(left, #FF9514 0%, #FF9514 50%, #E1E1E1 50%, #E1E1E1 100%);

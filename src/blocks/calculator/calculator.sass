@@ -63,6 +63,9 @@
         color: #575757
         gap: 10px
 
+        @media screen and (max-width: 1439px)
+            width: 283px
+
         @media screen and (max-width: 1119px)
             gap: 10px
             width: 332px
@@ -104,9 +107,11 @@
 
         @media screen and (max-width: 1439px)
             width: 320px
+            margin-left: -9px
 
         @media screen and (max-width: 1119px)
             width: 345px
+            margin-left: 0
 
         @media screen and (max-width: 767px)
             width: 100%
@@ -114,3 +119,7 @@
             font-size: 22px
             line-height: 20px
             margin-top: 3px
+
+        &:disabled
+            opacity: .4
+            
