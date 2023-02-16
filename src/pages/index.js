@@ -96,9 +96,8 @@ inputAnInitialFee.addEventListener('change', () => {
     inputAnInitialFee.value = inputCarCost.value / 100 * 60;
   } else {
     percent.textContent = price + '%';
-    const value = price * 120 / 100;
-    inputRangeAnInitialFee.value = value;
-    inputRangeAnInitialFee.style.background = `-webkit-linear-gradient(left, #FF9514 0%, #FF9514 ${value}%, #E1E1E1 ${value}%, #E1E1E1 100%)`;
+    inputRangeAnInitialFee.value = price;
+    inputRangeAnInitialFee.style.background = `-webkit-linear-gradient(left, #FF9514 0%, #FF9514 ${(price - 10) * 2}%, #E1E1E1 ${(price - 10) * 2}%, #E1E1E1 100%)`;
   }
 
   updateLeasing();
